@@ -1,8 +1,8 @@
 # CareBot
 
-A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
-
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/asdfghjkxd/CareBot)
+
+A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
 ## Installation
 
