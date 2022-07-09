@@ -1,20 +1,21 @@
 import datetime
 import logging
 import json
+import os
 
 from typing import *
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackQueryHandler
 from dotenv import load_dotenv
-from os import getenv
+
 
 
 # load API secrets
-load_dotenv('secrets.env')
+# load_dotenv('.secrets.env')
 
 # set loggers
-LOGGER = logging.getLogger("testBot")
-TELEGRAM_API_KEY = getenv('TELEGRAM_API_KEY')
+LOGGER = logging.getLogger("CareBot")
+TELEGRAM_API_KEY = os.environ('TELEGRAM_API_KEY')
 FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScJfCz5iYAhRPNEabDAzrA5uHhwf-Kvj2OlINFSt6dM14x0rg/viewform?usp=sf_link"
 
 
