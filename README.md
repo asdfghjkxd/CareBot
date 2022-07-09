@@ -2,6 +2,8 @@
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
+[Release](https://img.shields.io/github/v/release/asdfghjkxd/CareBot)
+
 ## Installation
 
 To install and run this file locally, create a `.env` file and place your secret Telegram API key in it.
@@ -20,7 +22,7 @@ If you are using an online service like Heroku to serve your app, you should sto
 
 ## Usage
 
-If you wish to run this locally on your machine, simply run `python bot.py`.
+If you wish to run this bot locally on your machine, simply run `python bot.py`.
 
 If you wish to use our instance of the bot hosted on Heroku, make sure that line 13 is commented out, and that the name of the variable in line 17 is replaced with `TELEGRAM_API_KEY`.
 
