@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 
 # set loggers
 LOGGER = logging.getLogger("CareBot")
-TELEGRAM_API_KEY = os.environ('TELEGRAM_API_KEY')
+TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
 FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScJfCz5iYAhRPNEabDAzrA5uHhwf-Kvj2OlINFSt6dM14x0rg/viewform?usp=sf_link"
 
 
