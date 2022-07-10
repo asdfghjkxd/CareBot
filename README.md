@@ -5,7 +5,9 @@
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
-[<img src="assets/main_screen.png" width="500"/>](assets/main_screen.pn)
+<p align="center"> 
+    <img src="https://github.com/asdfghjkxd/CareBot/blob/main/assets/main_screen.png?raw=True" alt="Main Page" width="500"/> 
+</p>
 
 ## Installation
 
