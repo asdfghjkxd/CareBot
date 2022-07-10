@@ -5,11 +5,15 @@
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
+![Sample screen](assets/main_screen.png)
+
 ## Installation
 
 To install and run this file locally, create a `.env` file and place your secret Telegram API key in it.
 
-To access this key in the code in `bot.py`, uncomment line 13, and replace the filename with the name of your `.env` file, and change line 17 to the name of your Telegram secret API key in your `.env` file.
+To access this key in the code in `bot.py`, uncomment line 13, and replace the filename with the name of your `.env` file, and change line 17 to the name of your Telegram secret API key in your `.env` file, as seen below:
+
+![Uncommenting line 13 and changing line 17](assets/api_key.png)
 
 An example `.env` file should look like this:
 
