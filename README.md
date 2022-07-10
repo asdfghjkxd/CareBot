@@ -14,9 +14,9 @@ A simple Telegram bot that assists in pairing volunteers with a VWO that aligns 
 
 Firstly, clone this repository onto your machine by running `git clone https://github.com/asdfghjkxd/CareBot`, or by clicking the green `Code` button, and selecting `Download ZIP`, followed by extracting the ZIP file to the desired location on your machine.
 
-To install and run this bot locally, create a `.env` file and place your secret Telegram API key in it, or modify the file `.secrets.env`.
+Next, create a `.env` file and place your secret Telegram API key in it, or modify the existing file `.secrets.env` with your Telegram API key.
 
-To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15, and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
+To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15 (if you created a new `.env` file), and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
 
 ![Uncommenting lines](assets/api_key.png)
 
@@ -48,4 +48,4 @@ To start the bot, simply run the command `python bot.py` on your Terminal. Do en
 
 ## Deployment
 
-We have launched our bot on Microsoft Azure, on a Windows 10 Enterprise Virtual Machine. Our live instance of the Telegram bot can be found at the following link: [Telegram Bot](https://t.me/life_hacked_bot.)
+We have launched our bot on Microsoft Azure, on a Windows 10 Enterprise Virtual Machine. Our live instance of the Telegram bot can be found at the following link: [Telegram Bot](https://t.me/life_hacked_bot)
