@@ -1,6 +1,7 @@
 # CareBot
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/asdfghjkxd/CareBot)
+[![Made with Python](https://img.shields.io/badge/Python->=3.9-blue?logo=python&logoColor=white)](https://python.org "Python Homepage")
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
