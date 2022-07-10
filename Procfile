@@ -1,1 +1,0 @@
-web: python heroku_bot.py
