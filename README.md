@@ -5,7 +5,7 @@
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
-![Sample screen](assets/main_screen.png)
+[<img src="assets/main_screen.png" width="500"/>](assets/main_screen.pn)
 
 ## Installation
 
