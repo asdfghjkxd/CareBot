@@ -6,7 +6,7 @@
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
-![Main page](assets/main_page.png)
+![Main page](https://raw.githubusercontent.com/asdfghjkxd/CareBot/main/assets/main_screen.png)
 
 ## Installation
 
@@ -16,7 +16,7 @@ Next, create a `.env` file and place your secret Telegram API key in it, or modi
 
 To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15 (if you created a new `.env` file), and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
 
-![Uncommenting lines](assets/api_key.png)
+![Uncomment](https://raw.githubusercontent.com/asdfghjkxd/CareBot/main/assets/api_key.png)
 
 An example `.env` file should look like this:
 
