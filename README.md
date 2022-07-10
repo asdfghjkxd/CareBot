@@ -2,6 +2,7 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/asdfghjkxd/CareBot)
 [![Made with Python](https://img.shields.io/badge/Python->=3.9-blue?logo=python&logoColor=white)](https://python.org "Python Homepage")
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
 A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
@@ -11,7 +12,7 @@ A simple Telegram bot that assists in pairing volunteers with a VWO that aligns 
 
 ## Installation
 
-To install and run this bot locally, create a `.env` file and place your secret Telegram API key in it.
+To install and run this bot locally, create a `.env` file and place your secret Telegram API key in it, or modify the file `.secrets.env`.
 
 To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15, and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
 
@@ -19,7 +20,7 @@ To access this key in the code in `bot.py`,  replace the filename with the name 
 
 An example `.env` file should look like this:
 
-```env
+```dotenv
 TELEGRAM_API_KEY=YOUR_KEY_HERE
 ```
 
@@ -37,12 +38,12 @@ on a Linux-based system or
 $env:YOUR_ENV_VAR_NAME = API_KEY
 ```
 
-and comment out line 15, and replace the variable name in line 19 to `YOUR_ENV_VAR_NAME` instead.
-
-Finally, run the command `python bot.py` to start the bot.
+on a Windows system, and comment out line 15, and replace the variable name in line 19 to `YOUR_ENV_VAR_NAME` instead.
 
 ## Usage
 
-If you wish to run this bot locally on your machine, simply run `python bot.py`.
+To start the bot, simply run the command `python bot.py` on your Terminal.
 
-We have launched our bot on Microsoft Azure, on a Windows 10 Enterprise Virtual Machine. Our Telegram bot can be found at the following link: <https://t.me/life_hacked_bot>.
+## Deployment
+
+We have launched our bot on Microsoft Azure, on a Windows 10 Enterprise Virtual Machine. Our live instance of the Telegram bot can be found at the following link: [Telegram Bot](https://t.me/life_hacked_bot.)
