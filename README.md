@@ -12,6 +12,8 @@ A simple Telegram bot that assists in pairing volunteers with a VWO that aligns 
 
 ## Installation
 
+Firstly, clone this repository onto your machine by running `git clone https://github.com/asdfghjkxd/CareBot`, or by clicking the green `Code` button, and selecting `Download ZIP`, followed by extracting the ZIP file to the desired location on your machine.
+
 To install and run this bot locally, create a `.env` file and place your secret Telegram API key in it, or modify the file `.secrets.env`.
 
 To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15, and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
@@ -24,9 +26,7 @@ An example `.env` file should look like this:
 TELEGRAM_API_KEY=YOUR_KEY_HERE
 ```
 
-After doing so, run the command `pip install -r requirements.txt` to install all requirements of this project. You should be doing this in a properly configured Python environment (venv or conda) to avoid dependency clashes.
-
-You may instead choose to store your environment variable in your instance of your terminal instead. To do so, run the command:
+If you do not wish to store your API key in the `.env` file, you may instead choose to store your environment variable in your instance of your Terminal instead. To do so, run the command:
 
 ```sh
 export YOUR_ENV_VAR_NAME=API_KEY
@@ -38,11 +38,13 @@ on a Linux-based system or
 $env:YOUR_ENV_VAR_NAME = API_KEY
 ```
 
-on a Windows system, and comment out line 15, and replace the variable name in line 19 to `YOUR_ENV_VAR_NAME` instead.
+on a Windows system, and comment out line 15 of `bot.py`, and replace the variable name in line 19 to `YOUR_ENV_VAR_NAME` instead.
+
+After doing so, run the command `pip install -r requirements.txt` to install all requirements of this project. You should be doing this in a properly configured Python environment (`venv` or `conda`) to avoid dependency clashes.
 
 ## Usage
 
-To start the bot, simply run the command `python bot.py` on your Terminal.
+To start the bot, simply run the command `python bot.py` on your Terminal. Do ensure that you have properly activated your environment by running `conda activate YOUR_ENV_NAME` for `conda`, `source path/to/your/env/bin/activate` on Mac/Linux systems or `path\to\your\env\Scripts\activate.bat` on Windows systems for `venv`.
 
 ## Deployment
 
