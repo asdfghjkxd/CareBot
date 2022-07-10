@@ -11,11 +11,13 @@ A simple Telegram bot that assists in pairing volunteers with a VWO that aligns 
 
 ## Installation
 
+### Local
+
 To install and run this file locally, create a `.env` file and place your secret Telegram API key in it.
 
-To access this key in the code in `bot.py`, uncomment line 13, and replace the filename with the name of your `.env` file, and change line 17 to the name of your Telegram secret API key in your `.env` file, as seen below:
+To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15, and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
 
-![Uncommenting line 13 and changing line 17](assets/api_key.png)
+![C](assets/api_key.png)
 
 An example `.env` file should look like this:
 
@@ -26,6 +28,12 @@ TELEGRAM_API_KEY=YOUR_KEY_HERE
 After doing so, run the command `pip install -r requirements.txt` to install all requirements of this project. You should be doing this in a properly configured Python environment (venv or conda) to avoid dependency clashes.
 
 If you are using an online service like Heroku to serve your app, you should store the variable as an environment variable on the service, and make an `os.getenv()` or `os.environ()` call to retrieve the environment variable, instead of storing and commit the API key onto Github.
+
+Finally, run the command `python bot.py` to start the bot.
+
+### On Heroku
+
+To run the bot on a service like Heroku, run the command `python heroku_bot.py`.
 
 ## Usage
 

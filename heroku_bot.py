@@ -1,5 +1,3 @@
-"""Run this file to deploy your bot locally"""
-
 import datetime
 import logging
 import json
@@ -7,18 +5,17 @@ import os
 
 from typing import *
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackQueryHandler
-from dotenv import load_dotenv
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, CallbackQueryHandler, Updater
 
-
-# load API secrets
-load_dotenv('.secrets.env')
 
 # set loggers, form URLs, and API key
 LOGGER = logging.getLogger("CareBot")
 TELEGRAM_API_KEY = os.environ["TELEGRAM_API_KEY"]
 FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScJfCz5iYAhRPNEabDAzrA5uHhwf-Kvj2OlINFSt6dM14x0rg/viewform?usp=sf_link"
 
+# heroku vars
+PORT = int(os.environ["PORT", 5000])
+ENDPOINT = "https://lifehack2022.herokuapp.com/"
 
 class VWOOptions:
     """Class to manage the VWOs Keyboards"""
@@ -153,14 +150,19 @@ async def saveData(update, data) -> None:
         json.dump(users, user_db)
 
 def main():
-    """Function to start the bot locally"""
+    """Function to start the bot on Heroku"""
 
-    LOGGER.warning(msg=f'Bot started at {datetime.datetime.now()}')
+    updater = Updater(TELEGRAM_API_KEY, use_context=True)
+    dispatcher = updater.dispatcher
+    dispatcher.add_handler(CommandHandler("start", startScreen))
+    dispatcher.add_handler(CallbackQueryHandler(startResponse))
+
+    updater.start_webhook(listen='0.0.0.0',
+                          port=PORT,
+                          url_path=TELEGRAM_API_KEY)
+    updater.bot.set_webhook(ENDPOINT + TELEGRAM_API_KEY)
+    updater.idle()
     
-    app = ApplicationBuilder().token(TELEGRAM_API_KEY).build()
-    app.add_handler(CommandHandler("start", startScreen))
-    app.add_handler(CallbackQueryHandler(startResponse))
-    app.run_polling()
 
 # main code
 if __name__ == '__main__':
