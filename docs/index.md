@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+# CareBot
 
-You can use the [editor on GitHub](https://github.com/asdfghjkxd/CareBot/edit/gh-pages/docs/index.md) to maintain and preview the content for your website in Markdown files.
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/asdfghjkxd/CareBot)
+[![Made with Python](https://img.shields.io/badge/Python->=3.9-blue?logo=python&logoColor=white)](https://python.org "Python Homepage")
+![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A simple Telegram bot that assists in pairing volunteers with a VWO that aligns with their interest.
 
-### Markdown
+![Main Page](assets/main_page.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Installation
 
-```markdown
-Syntax highlighted code block
+Firstly, clone this repository onto your machine by running `git clone https://github.com/asdfghjkxd/CareBot`, or by clicking the green `Code` button, and selecting `Download ZIP`, followed by extracting the ZIP file to the desired location on your machine.
 
-# Header 1
-## Header 2
-### Header 3
+Next, create a `.env` file and place your secret Telegram API key in it, or modify the existing file `.secrets.env` with your Telegram API key.
 
-- Bulleted
-- List
+To access this key in the code in `bot.py`,  replace the filename with the name of your `.env` file on line 15 (if you created a new `.env` file), and change line 19 to the name of your Telegram secret API key in your `.env` file, as seen below:
 
-1. Numbered
-2. List
+![Uncommenting lines](assets/api_key.png)
 
-**Bold** and _Italic_ and `Code` text
+An example `.env` file should look like this:
 
-[Link](url) and ![Image](src)
+```dotenv
+TELEGRAM_API_KEY=YOUR_KEY_HERE
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+If you do not wish to store your API key in the `.env` file, you may instead choose to store your environment variable in your instance of your Terminal instead. To do so, run the command:
 
-### Jekyll Themes
+```sh
+export YOUR_ENV_VAR_NAME=API_KEY
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/asdfghjkxd/CareBot/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+on a Linux-based system or  
 
-### Support or Contact
+```powershell
+$env:YOUR_ENV_VAR_NAME = API_KEY
+```
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+on a Windows system, and comment out line 15 of `bot.py`, and replace the variable name in line 19 to `YOUR_ENV_VAR_NAME` instead.
+
+After doing so, run the command `pip install -r requirements.txt` to install all requirements of this project. You should be doing this in a properly configured Python environment (`venv` or `conda`) to avoid dependency clashes.
+
+## Usage
+
+To start the bot, simply run the command `python bot.py` on your Terminal. Do ensure that you have properly activated your environment by running `conda activate YOUR_ENV_NAME` for `conda`, `source path/to/your/env/bin/activate` on Mac/Linux systems or `path\to\your\env\Scripts\activate.bat` on Windows systems for `venv`.
+
+## Deployment
+
+We have launched our bot on Microsoft Azure, on a Windows 10 Enterprise Virtual Machine. Our live instance of the Telegram bot can be found at the following link: [Telegram Bot](https://t.me/life_hacked_bot)
